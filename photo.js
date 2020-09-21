@@ -1,4 +1,4 @@
-class Photo
+export class Photo
 {
     constructor(width = 8, height = 10)
     {
@@ -28,7 +28,7 @@ class Photo
     }
 }
 
-class MattedPhoto extends Photo
+export class MattedPhoto extends Photo
 {
     constructor(width = 8, height = 10, color = "grey")
     {
@@ -48,7 +48,7 @@ class MattedPhoto extends Photo
     }
 }
 
-class FramedPhoto extends Photo
+export class FramedPhoto extends Photo
 {
     constructor(width = 8, height = 10, material = "wood", style = "traditional")
     {
@@ -68,16 +68,3 @@ class FramedPhoto extends Photo
         return `This is a ${this.width} by ${this.height} ${this.material} framed photo. The style is ${this.style} and it costs ${this.price()}`;
     }
 }
-
-let p1 = new Photo();
-let p2 = new Photo(14, 10);
-let m1 = new MattedPhoto();
-let m2 = new MattedPhoto(14, 10, "blue");
-let f1 = new FramedPhoto();
-let f2 = new FramedPhoto(14, 10, "steel", "brushed metal");
-console.log(p1.toString());
-console.log(p2.toString());
-console.log(m1.toString());
-console.log(m2.toString());
-console.log(f1.toString());
-console.log(f2.toString());
